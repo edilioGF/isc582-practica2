@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ISC581-Practica2 2016-0522</string>
+    <string name="header">Choose what to allow APP to access</string>
+    <string name="storage">Storage</string>
+    <string name="storage_description">access photos, media and files on your device</string>
+    <string name="location">Location</string>
+    <string name="location_description">access the device location</string>
+    <string name="camera">Camera</string>
+    <string name="camera_description">take pictures and record video</string>
+    <string name="phone">Phone</string>
+    <string name="phone_description">make and manage phone calls</string>
+    <string name="contacts">Contacts</string>
+    <string name="contacts_description">access your contacts</string>
+    <string name="cancel">cancel</string>
+    <string name="continue_txt">continue</string>
+</resources>
