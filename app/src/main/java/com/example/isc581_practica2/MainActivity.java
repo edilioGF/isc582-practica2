@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ConstraintLayout settings_layout;
 
+    public static final int PERMISSION_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 List<String> permissionsList = new ArrayList<>();
-                permissionsList.add(READ_EXTERNAL_STORAGE);
 
                 if (storage_switch.isChecked() && !userHavePermission(READ_EXTERNAL_STORAGE))
                     permissionsList.add(READ_EXTERNAL_STORAGE);
@@ -93,12 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 if (contacts_switch.isChecked() && !userHavePermission(READ_CONTACTS))
                     permissionsList.add(READ_CONTACTS);
 
-                if( permissionsList.size() != 0 ) {
-                    ActivityCompat.requestPermissions(MainActivity.this, permissionsList.toArray(new String[0]), 1);
-                } else {
-                    Intent intent = new Intent(MainActivity.this, ButtonsActionsActivity.class);
-                    startActivity(intent);
-                }
+                ActivityCompat.requestPermissions(MainActivity.this, permissionsList.toArray(new String[0]), PERMISSION_CODE);
             }
         });
     }
